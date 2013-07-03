@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no" />	<!-- //chrome -->
+	<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=no" /> <!-- android -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/ninjagame.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
+	
+    
+</head> 
+<body>
+    <header><h1>Ninja Garden</h1></header>
+    <div id="main">
+        <div id="scorebox" class="clearfix">
+            <ul>
+                <li>Ninja Boy: <input id="p1score" type="text" class="score" value="1000"></li>
+                <li>Ninja Cat: <input id="p2score" type="text" class="score" value="1000"></li>
+            </ul>
+        </div>
+    
+        <div id="gameover">
+            <div class="win"><h1>The Winner is <br/><span id="winner"></span></h1></div>
+        </div>
+      
+
+        <div id="ninjaboxleft">
+			  <div class="speech">
+					<img id="bubble1" src="images/speechbubble1.png">
+					<span id="talkshit-10" class="curse">EAT SHIT!</span>		
+					<span id="talkshit-11" class="curse">DIE FUCKER!</span>	
+					<span id="talkshit-12" class="curse">LITTLE BITCH!</span>						
+				</div>
+            <div id="ninjaBoyposition">
+                <img id="ninja1" src="images/ninja1/ninja1.png">
+            </div>
+            <div class="weapons">
+                   <img id="w_star1" class="w_star" src="images/weapons/ninjastar_weapon.png">  		   
+            </diV>   
+            
+        </div>   
+        
+        
+        
+        
+        <div id="ninjaboxright" class="cleafix">
+				<div class="speech">
+					<img id="bubble2" src="images/speechbubble2.png">
+					<span id="talkshit-20">FUCK YOU</span>
+					<span id="talkshit-21" class="curse">You Suck Dick For Nickels</span>	
+					<span id="talkshit-22" class="curse">Your Mom is Peter Pan</span>						
+				</div>
+				<div id="ninjaCatposition">
+					  <img id="ninja2" src="images/ninja2/ninja2.png">
+				</div>
+				<div class="weapons">
+					 <img id="w_star2" class="w_star" src="images/weapons/ninjastar_weapon.png"> 
+					 <img id="w_bomb2" class="w_bomb" src="images/weapons/bomb.png">
+
+				</div>        
+        </div>   
+        
+        
+        
+        <div id="joysticks">        
+            <ul class="joystick1">
+                <li><button id="ninjaboya" class="game-buttons" type="button">A</button></li>
+                <li><button id="ninjaboyb" class="game-buttons" type="button" >B</button></li>
+                <li class="spacer"></li>
+                <li><button id="ninjacata" class="game-buttons" type="button">A</button></li>
+                <li><button id="ninjacatb" class="game-buttons" type="button">B</button></li>
+            </ul>
+            
+        </div>
+    
+        
+        
+        
+        
+        
+    </div>  <!-- main -->
+    <footer><h5>game by ken fujimoto</h5></footer>
+</body>
+</html>

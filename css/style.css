@@ -1,0 +1,342 @@
+/* ninja cat game by Ken Fujimoto 
+ * www.kfmoto.com
+ * Dual licensed under the MIT and GPL licenses.
+ */
+
+body{
+    margin:0;
+    padding:0;
+    font-family: Tahoma, Arial, sans-serif;
+    height:1000px;
+}
+
+header{
+    background:#EEEEEE;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+}
+
+h1{
+    font-size:64px;
+    font-family: 'Dawning of a New Day', cursive;
+
+}
+
+
+ul li {
+    list-style: none;
+    display:inline-block;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+div#main {
+background:url(../images/zen-bg.jpg);
+margin:0 auto;  
+min-height: 800px;   
+width:800px;
+border:5px solid #000;
+position: relative; 
+z-index:0;
+    
+}
+
+div#scorebox{
+    position:relative;
+    top:0;
+    width:400px;
+    background:#888;
+    opacity:0.7;
+    height:50px;
+    border:2px solid #444;
+    margin:0 auto;
+    color:#fff;
+}
+
+div#scorebox ul li {
+    list-style:none;
+    display:inline-block;
+    width:140px;
+    font-size:1em;
+    height:20px;
+}
+
+div#scorebox ul li input.score {
+    width:60px;
+    background-color:#ccc;
+    border:none;
+    color:#222;
+    font-weight:bold;
+    font-size:14px;
+    height:18px;
+}
+
+
+/**************** SPEECH BUBBLE *********800************************/
+
+div.speech {
+position:absolute;
+z-index:700;
+}
+
+img#bubble1{
+ position: relative;
+ left:220px;
+z-index:650;
+display:none;
+}
+
+img#bubble2{
+position: relative;
+z-index:651;
+top:80px;
+display:none;
+}
+
+div.speech span {
+position:relative;
+z-index:800;
+}
+
+div.speech span.curse {
+z-index:801;
+}
+
+span#talkshit-10 {
+display:none;
+left:275px;
+bottom:156px;
+font-size:48px;
+}
+
+span#talkshit-11 {
+display:none;
+left:284px;
+bottom:156px;
+font-size:32px;
+}
+
+
+span#talkshit-12 {
+display:none;
+left:260px;
+bottom:150px;
+font-size:36px;
+}
+
+
+span#talkshit-20{
+display:none;
+right:-40px;
+bottom:60px;
+font-size:48px;
+
+}
+
+span#talkshit-21{
+display:none;
+right:-50px;
+bottom:80px;
+font-size:32px;
+width:230px;
+
+}
+
+
+span#talkshit-22{
+display:none;
+right:-50px;
+bottom:80px;
+font-size:32px;
+width:230px;
+}
+
+/**************** NINJAS *****************100****************/
+
+div#ninjaboxleft{
+    float:left;
+}
+
+div#ninjaBoyposition{
+    margin:140px 0 0 20px;
+}
+
+img#ninja1{  /* ninja boy */
+position:relative;
+z-index:100;
+
+}
+
+div#ninjaboxright{  
+    margin-left:350px;
+}
+
+div#ninjaCatposition{
+    margin:100px 0 0 175px;
+}
+
+img#ninja2{  /* ninja cat */
+    position: relative;
+    top: 240px;
+	z-index:99;
+    
+}
+
+
+
+
+/************** GAME CONTROLLER    ******1000************/
+
+div#joysticks{
+    display: inline-block;
+    left: 85px;
+    position: absolute;
+    bottom:-100px;	
+}
+
+li.spacer {
+    width:300px;
+}
+
+div.joystick1{
+    position:relative;
+    top:350px;
+}
+
+div.joystick2{
+    position:relative;
+    top:390px;
+}
+
+button.game-buttons{
+    border-radius:130px;
+    width:80px;
+	height:80px;
+    font-size:48px;
+    z-index: 999;
+}
+
+
+
+
+/* /////////////////////////   WEAPONS    //////////////////////////////////*/
+
+
+div.weapons{
+  
+}
+
+img#w_star1 {
+    display:none;
+    position:relative;    
+    left:130px;
+    bottom:100px;
+    z-index:500;
+    transition-duration:1s, 0.1s;
+    transition-property:opacity, left;
+}
+
+
+img#w_star2 {
+    display:none;
+    position:relative;   
+    left:170px;
+    bottom:0;
+    transition-duration:1.0s, 0.1s;
+    transition-property:opacity, left;    
+}
+
+img#w_bomb1 {
+    bottom: 0;
+    display: none;
+    left: 170px;
+    position: relative;
+    transition-duration: 2.0s, 1.0s;
+    transition-property: opacity, left;
+}
+
+
+img#w_bomb2 {
+    bottom: 350px;
+    display: none;
+    left: 80px;
+    position: relative;
+    transition-duration: 2.0s, 1.0s;
+    transition-property: opacity, left;
+}
+
+
+
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  END OF GAME  @@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+
+div#gameover {
+    display:none;
+    border:3px solid #333;
+    background: rgba(200, 200, 200, 0.5);
+    width:450px;
+    height:250px;
+    position:absolute;
+    z-index:7777;
+    text-align:center;
+    left:175px;
+    top:175px
+}
+
+div#gameover div.win {
+position:absolute;
+z-index:8888;
+opacity:1;
+left:50px;
+color:#fff;
+}
+
+span#winner {
+    color:#000;
+    position:relative;
+    bottom:10px;
+    
+}
+
+
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ FOOTER   @@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+footer {
+    text-align:center;
+    position:relative;
+}
+
+
+
+
+
+
+
